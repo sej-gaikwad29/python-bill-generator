@@ -12,11 +12,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 pdfmetrics.registerFont(TTFont('DejaVuSans', 'DejaVuSans.ttf'))
 # -------------------- CONFIG --------------------
-COMPANY_NAME = "ECO DRAIN SOLUTIONS"
-# THEME_COLOR = "#9e4b78"
-# THEME_COLOR = "#0F766E"
 THEME_COLOR = "#1F4E79"
-# THEME_COLOR = "#4B5563"
 
 TERMS = [
     "1. Goods once sold will not be taken back.",
@@ -53,8 +49,8 @@ company_frame = tk.LabelFrame(page1, text="Company Details", padx=10, pady=10)
 company_frame.pack(fill="x", padx=20, pady=5)
 
 tk.Label(company_frame, text="Company Name").grid(row=0, column=0, sticky="w")
-company_name_var = tk.StringVar(value=COMPANY_NAME)
-tk.Entry(company_frame, textvariable=company_name_var, state="readonly", width=30).grid(row=0, column=1, pady=3)
+company_name_var = tk.StringVar(value="Enter company name")
+tk.Entry(company_frame, textvariable=company_name_var,width=30).grid(row=0, column=1, pady=3)
 
 tk.Label(company_frame, text="Company Address").grid(row=1, column=0, sticky="w")
 company_address_var = tk.StringVar(value="Address here")
