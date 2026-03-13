@@ -17,3 +17,6 @@ professional PDF invoices.
 - Tkinter
 - ReportLab
 - PyInstaller
+
+#To convert the python file into.exe comands
+#python -m PyInstaller --onefile --windowed .\invoice_generator.py
